@@ -31,58 +31,70 @@
                         <span class="fa fa-home text-4xl"></span>
                     </div>
                 </a>
-                <a href="#" onclick="food_nav();">
+                <a href="#" onclick="makanan_berat_nav();">
                     <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
                         <span class="fa fa-burger text-4xl"></span>
                     </div>
                 </a>
-                <a href="#" onclick="drink_nav();">
+                <a href="#" onclick="makanan_ringan_nav();">
+                    <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
+                        <span class="fa fa-cookie text-4xl"></span>
+                    </div>
+                </a>
+                <a href="#" onclick="minuman_nav();">
                     <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
                         <span class="fa fa-mug-hot text-4xl"></span>
                     </div>
                 </a>
             </div>
             <div class="flex-initial w-screen bg-slate-100 rounded-3xl py-10 px-10">
-                
-                <h1 class="text-3xl mb-5">Kategori Menu</h1>
+                <h1 class="text-4xl font-extrabold" style="font-family: 'DynaPuff', cursive;"><span class="text-amber-400">Yuk,</span> Kenali Berbagai Macam</h1>
+                <h1 class="text-4xl text-amber-400 font-extrabold ml-28" style="font-family: 'DynaPuff', cursive;">Makanan Atau Minuman</h1>
+                <h1 class="text-4xl font-extrabold ml-10" style="font-family: 'DynaPuff', cursive;">Dan Belajar</h1>
+                <h1 class="text-4xl text-amber-400 font-extrabold ml-3 mb-16" style="font-family: 'DynaPuff', cursive;">Memasaknya Disini !!</h1>
+                <div class="flex justify-between mb-5">
+                    <h1 class="text-3xl mb-5" style="font-family: 'DynaPuff', cursive;">Kategori Menu</h1>
+                    <button class="rounded-2xl bg-amber-400 text-white px-7 my-2 btn-amber" onclick="resetFilter()">Reset</button>
+                </div>
                 <div class="grid grid-cols-9 gap-x-3 mb-20">
-                    <div id="cat_1" class="col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                    <div id="daging" class="col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
                         <span class="fa fa-drumstick-bite text-4xl text-black mb-2"></span>
                         <div>Daging</div>
-                        <div class="col-span-1 p-3">
-                            <a class="group w-2" href="#" onclick="toggleClass('cat_1', 'cat_2');">
-                                <div id="cat_2" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
-                                    >
-                                </div>
-                            </a>
-                        </div>
+                        <button class="rounded-full bg-amber-400 text-white selected-reverse py-2 px-5 mt-4" onclick="toggleClass('daging')">
+                            >
+                        </button>
                     </div>
-                    <div id="cat_3" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
-                        <span class="fa fa-cookie text-4xl text-black mb-2"></span>
+                    <div id="kue" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                        <span class="fa fa-bread-slice text-4xl text-black mb-2"></span>
                         <div>Kue</div>
-                        <div class="p-3">
-                            <a class="group w-2" href="#" onclick="toggleClass('cat_3', 'cat_4');">
-                                <div id="cat_4" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
-                                    >
-                                </div>
-                            </a>
-                        </div>
+                        <button class="rounded-full bg-amber-400 text-white selected-reverse py-2 px-5 mt-4" onclick="toggleClass('kue')">
+                            >
+                        </button>
                     </div>
-                    <div id="cat_5" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                    <div id="juice" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
                         <span class="fa fa-wine-glass text-4xl text-black mb-2"></span>
                         <div>Juice</div>
-                        <div class="p-3">
-                            <a class="group w-2" href="#" onclick="toggleClass('cat_5', 'cat_6');">
-                                <div id="cat_6" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
-                                    >
-                                </div>
-                            </a>
-                        </div>
+                        <button class="rounded-full bg-amber-400 text-white selected-reverse py-2 px-5 mt-4" onclick="toggleClass('juice')">
+                            >
+                        </button>
+                    </div>
+                    <div id="kripik" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                        <span class="fa fa-cookie-bite text-4xl text-black mb-2"></span>
+                        <div>Kripik</div>
+                        <button class="rounded-full bg-amber-400 text-white selected-reverse py-2 px-5 mt-4" onclick="toggleClass('kripik')">
+                            >
+                        </button>
                     </div>
                 </div>
+                <div class="flex justify-between mb-5">
+                    <h1 class="text-3xl mb-5" style="font-family: 'DynaPuff', cursive;">Daftar Makanan</h1>
+                    <button class="rounded-2xl bg-amber-400 text-white px-5 my-2 btn-amber" onclick="toggleFilter()">Refresh</button>
+                </div>
                 <div class="grid grid-cols-4 gap-x-5">
-                    <div id="post-1" class="col-span-1 flex flex-col items-center">
-                        <img class="relative rounded-full z-30" width="230px" src="img/rendang-thumb.webp" alt="">
+                    <div id="rendang" class="col-span-1 flex flex-col items-center">
+                        <div class="h-56 w-32 mb-3">
+                            <img class="relative rounded-full z-30" width="230px" src="img/rendang-thumb.webp" alt="">
+                        </div>
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Rendang</span>
                             <a href="content_rendang.html">
@@ -92,8 +104,10 @@
                             </a>
                         </div>
                     </div>
-                    <div id="post-2" class="col-span-1 flex flex-col items-center">
-                        <img class="flex-none relative rounded-full z-30" width="230px" src="img/martabak-manis.webp" alt="">
+                    <div id="martabak_manis" class="col-span-1 flex flex-col items-center">
+                        <div class="w-56 h-32 mb-3">
+                            <img class="flex-none relative rounded-full z-30" src="img/martabak-manis.webp" alt="">
+                        </div>
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Martabak Manis</span>
                             <a href="content_martabak_manis.html">
@@ -103,11 +117,26 @@
                             </a>
                         </div>
                     </div>
-                    <div id="post-3" class="col-span-1 flex flex-col items-center">
-                        <img class="flex-none relative rounded-full z-30" width="230px" src="img/juice-mangga.webp" alt="">
+                    <div id="juice_mangga" class="col-span-1 flex flex-col items-center">
+                        <div class="w-56 h-32 mb-3">
+                            <img class="flex-none relative rounded-full z-30" src="img/juice-mangga.webp" alt="">
+                        </div>
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Juice Mangga</span>
                             <a href="content_juice_mangga.html">
+                                <span class="rounded-full bg-amber-500 text-white px-5 py-3">
+                                    >
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="sanjai" class="col-span-1 flex flex-col items-center">
+                        <div class="w-56 h-32 mb-3">
+                            <img class="flex-none relative rounded-full z-30" height="10p" src="img/sanjai.jpg" alt="">
+                        </div>
+                        <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
+                            <span class="text-xl mb-5">Sanjai Balado</span>
+                            <a href="content_sanjai_balado.html">
                                 <span class="rounded-full bg-amber-500 text-white px-5 py-3">
                                     >
                                 </span>

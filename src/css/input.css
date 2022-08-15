@@ -22,4 +22,9 @@
         @apply bg-amber-400 text-white;
         transition: .3s;
     }
+
+    .btn-amber:hover {
+        @apply bg-white text-black focus:outline focus:outline-4 focus:outline-amber-400;
+        transition: .3s;
+    }
 }
