@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap" rel="stylesheet">
+
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <div class="flex font-extrabold mt-6 mb-5">
@@ -29,53 +31,48 @@
                         <span class="fa fa-home text-4xl"></span>
                     </div>
                 </a>
-                <a href="#">
-                    <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
-                        <span class="fa fa-mug-hot text-4xl"></span>
-                    </div>
-                </a>
-                <a href="#">
+                <a href="#" onclick="food_nav();">
                     <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
                         <span class="fa fa-burger text-4xl"></span>
                     </div>
                 </a>
-                <a href="#">
+                <a href="#" onclick="drink_nav();">
                     <div class="hover:bg-amber-500 rounded-full my-3 py-3 pl-3.5">    
-                        <span class="fa fa-cookie text-4xl"></span>
+                        <span class="fa fa-mug-hot text-4xl"></span>
                     </div>
                 </a>
             </div>
             <div class="flex-initial w-screen bg-slate-100 rounded-3xl py-10 px-10">
                 <h1 class="text-3xl mb-5">Kategori Menu</h1>
                 <div class="grid grid-cols-9 gap-x-3 mb-20">
-                    <div class="col-span-1 text-center justify-center items-center rounded-3xl bg-amber-400 text-white p-5">
-                        <span class="fa fa-burger text-3xl text-black mb-2"></span>
-                        Makanan
-                        <div class="p-3">
-                            <a class="w-2" href="#">
-                                <div class="rounded-full bg-white text-amber-500 py-2">
+                    <div id="cat_1" class="col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                        <span class="fa fa-drumstick-bite text-4xl text-black mb-2"></span>
+                        <div>Daging</div>
+                        <div class="col-span-1 p-3">
+                            <a class="group w-2" href="#" onclick="toggleClass('cat_1', 'cat_2');">
+                                <div id="cat_2" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
                                     >
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-span-1 text-center justify-center items-center rounded-3xl bg-amber-400 text-white p-5">
-                        <span class="fa fa-cookie text-3xl text-black mb-2"></span>
-                        Snack
+                    <div id="cat_3" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                        <span class="fa fa-cookie text-4xl text-black mb-2"></span>
+                        <div>Kue</div>
                         <div class="p-3">
-                            <a class="w-2" href="#">
-                                <div class="rounded-full hover bg-white text-amber-500 py-2">
+                            <a class="group w-2" href="#" onclick="toggleClass('cat_3', 'cat_4');">
+                                <div id="cat_4" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
                                     >
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-span-1 text-center justify-center items-center rounded-3xl bg-amber-400 text-white p-5">
-                        <span class="fa fa-mug-hot text-3xl text-black mb-2"></span>
-                        Minuman
+                    <div id="cat_5" class=" col-span-1 text-center justify-center items-center rounded-3xl bg-white text-black p-5 selected">
+                        <span class="fa fa-wine-glass text-4xl text-black mb-2"></span>
+                        <div>Juice</div>
                         <div class="p-3">
-                            <a class="w-2" href="#">
-                                <div class="rounded-full bg-white text-amber-500 py-2">
+                            <a class="group w-2" href="#" onclick="toggleClass('cat_5', 'cat_6');">
+                                <div id="cat_6" class="rounded-full bg-amber-400 text-white selected-reverse py-2">
                                     >
                                 </div>
                             </a>
@@ -83,7 +80,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-4 gap-x-5">
-                    <div class="col-span-1 flex flex-col items-center">
+                    <div id="post-1" class="col-span-1 flex flex-col items-center">
                         <img class="relative rounded-full z-30" width="230px" src="img/rendang-thumb.webp" alt="">
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Rendang</span>
@@ -94,7 +91,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-span-1 flex flex-col items-center">
+                    <div id="post-2" class="col-span-1 flex flex-col items-center">
                         <img class="flex-none relative rounded-full z-30" width="230px" src="img/martabak-manis.webp" alt="">
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Martabak Manis</span>
@@ -105,7 +102,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-span-1 flex flex-col items-center">
+                    <div id="post-3" class="col-span-1 flex flex-col items-center">
                         <img class="flex-none relative rounded-full z-30" width="230px" src="img/juice-mangga.webp" alt="">
                         <div class="relative bg-white flex flex-col items-center rounded-3xl pt-20 pb-10 w-full z-20"  style="bottom: 60px;">
                             <span class="text-xl mb-5">Juice Mangga</span>

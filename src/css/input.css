@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .unselected {
+        @apply bg-white text-black;
+        transition: .5s;
+    }
+
+    .selected {
+        @apply bg-amber-400 text-white;
+        transition: .5s;
+    }
+
+    .selected-reverse {
+        @apply bg-white text-black;
+        transition: .3s;
+    }
+
+    .unselected-reverse {
+        @apply bg-amber-400 text-white;
+        transition: .3s;
+    }
+}
